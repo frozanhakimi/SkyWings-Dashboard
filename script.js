@@ -42,3 +42,23 @@ document.addEventListener('click', function (e) {
     } 
 
 }); 
+
+// Sidebar Active State
+const menuLinks = document.querySelectorAll('.menu a');
+
+menuLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+
+        menuLinks.forEach(function (item) {
+            item.classList.remove('active');
+        });
+
+        link.classList.add('active');
+    });
+});
+
+
+// Help Box 
+supportCard.addEventListener('click', function () { 
+    window.open('mailto:hakimifrozan0@gmail.com.com', '_self'); 
+});
