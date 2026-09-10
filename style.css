@@ -442,3 +442,215 @@ body {
     color: #6b7280;
     font-size: 13px;
 }
+/* =========================================
+   DESKTOP SIDEBAR TOGGLE BUTTON
+   ========================================= */
+
+   .sidebar-toggle {
+    position: fixed;
+    left: 250px;
+    top: 35px;
+
+    width: 34px;
+    height: 34px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #ffffff;
+    color: #1e3a8a;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    /* Embossed effect */
+    box-shadow:
+        4px 4px 8px rgba(0, 0, 0, 0.20),
+        -3px -3px 7px rgba(255, 255, 255, 0.9);
+
+    z-index: 3000;
+
+    transition: 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+    transform: scale(1.08);
+}
+
+.sidebar-toggle:active {
+    box-shadow:
+        inset 3px 3px 6px rgba(0, 0, 0, 0.20),
+        inset -3px -3px 6px rgba(255, 255, 255, 0.8);
+}
+
+
+/* =========================================
+   COLLAPSED SIDEBAR - DESKTOP
+   ========================================= */
+
+.sidebar {
+    transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+    width: 70px;
+}
+
+
+/* Hide logo */
+
+.sidebar.collapsed .logo-area img,
+.sidebar.collapsed .logo-area h1,
+.sidebar.collapsed .logo-area span {
+    display: none;
+}
+
+
+/* Keep only icons */
+
+.sidebar.collapsed .menu a {
+    font-size: 0;
+    justify-content: center;
+}
+
+.sidebar.collapsed .menu a svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+
+/* Hide support card */
+
+.sidebar.collapsed .support-card {
+    display: none;
+}
+
+
+/* Move button next to collapsed sidebar */
+
+.sidebar.collapsed ~ .sidebar-toggle {
+    left: 54px;
+}
+
+
+/* Rotate button */
+
+.sidebar.collapsed ~ .sidebar-toggle {
+    transform: rotate(180deg);
+}
+
+/* =========================================
+   MOBILE SIDEBAR
+   ========================================= */
+
+   @media (max-width: 768px) {
+
+    /* Hide the small four-item hamburger dropdown on mobile */
+
+    .hamburger-dropdown {
+        display: none !important;
+    }
+
+
+    /* Sidebar opens as a window */
+
+    .sidebar {
+        position: fixed;
+
+        top: 70px;
+        left: 20px;
+
+        width: 280px;
+        height: auto;
+        max-height: calc(100vh - 90px);
+
+        background: rgba(255, 255, 255, 0.97);
+
+        border-radius: 16px;
+
+        z-index: 2500;
+
+        transform: translateX(-120%);
+
+        transition: transform 0.35s ease;
+
+        overflow-y: auto;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.30);
+    }
+
+
+    /* Open the window */
+
+    .sidebar.mobile-open {
+        transform: translateX(0);
+    }
+
+
+    /* Keep all sidebar items visible */
+
+    .sidebar.collapsed {
+        width: 280px;
+    }
+
+    .sidebar.collapsed .logo-area img,
+    .sidebar.collapsed .logo-area h1,
+    .sidebar.collapsed .logo-area span {
+        display: block;
+    }
+
+    .sidebar.collapsed .menu a {
+        font-size: 15px;
+        justify-content: flex-start;
+    }
+
+    .sidebar.collapsed .menu a svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .sidebar.collapsed .support-card {
+        display: block;
+    }
+
+
+    /* Hide desktop circle button */
+
+    .sidebar-toggle {
+        display: none;
+    }
+
+
+    /* Dark area behind the window */
+
+    .sidebar-overlay {
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background: rgba(0, 0, 0, 0.35);
+
+        z-index: 2400;
+
+        opacity: 0;
+        visibility: hidden;
+
+        transition: opacity 0.35s ease;
+    }
+
+    .sidebar-overlay.show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
