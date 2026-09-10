@@ -9,24 +9,30 @@ body {
     background: #f5f6f8;
 }
 
-/* Hero */
+
+/* =========================
+   Hero
+========================= */
 
 .hero {
     height: 400px;
     position: relative;
     padding-top: 80px;
+    margin-bottom: 205px;
 
     background:
         linear-gradient(
             rgba(35, 20, 70, 0.35),
             rgba(20, 30, 80, 0.35)
         ),
-        url(airplane\ in\ blue\ sky.jpg)
+        url(IMG-20260909-WA0000.jpg)
         center / cover;
-        
 }
 
-/* Title */
+
+/* =========================
+   Title
+========================= */
 
 .hero-content {
     text-align: center;
@@ -43,7 +49,9 @@ body {
 }
 
 
-/* Login Card */
+/* =========================
+   Login Card
+========================= */
 
 .login-card {
     width: 375px;
@@ -73,7 +81,9 @@ body {
 }
 
 
-/* Social Buttons */
+/* =========================
+   Social Buttons
+========================= */
 
 .social-buttons {
     display: flex;
@@ -93,18 +103,30 @@ body {
     border-radius: 5px;
 
     font-size: 20px;
-    color: #4267B2;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.facebook {
+    color: #1877f2;
 }
 
 .google {
-    color: #4285F4;
+    color: #4285f4;
 }
-.google i {
+
+.social-btn i {
     font-size: 20px;
 }
 
 
-/* Inputs */
+/* =========================
+   Inputs
+========================= */
 
 form input[type="text"],
 form input[type="password"] {
@@ -121,12 +143,18 @@ form input[type="password"] {
     outline: none;
 }
 
+form input:focus {
+    border-color: #9c00ff;
+}
+
 form input::placeholder {
     color: #b8bdc5;
 }
 
 
-/* Sign In */
+/* =========================
+   Sign In
+========================= */
 
 .sign-in {
     width: 100%;
@@ -136,6 +164,7 @@ form input::placeholder {
     border-radius: 6px;
 
     color: white;
+
     font-weight: bold;
     font-size: 11px;
 
@@ -149,7 +178,9 @@ form input::placeholder {
 }
 
 
-/* Options */
+/* =========================
+   Options
+========================= */
 
 .options {
     display: flex;
@@ -173,8 +204,16 @@ form input::placeholder {
     gap: 5px;
 }
 
+.options input[type="checkbox"] {
+    width: auto;
+    height: auto;
+    margin: 0;
+}
 
-/* OR */
+
+/* =========================
+   OR
+========================= */
 
 .or {
     display: flex;
@@ -189,6 +228,7 @@ form input::placeholder {
     content: "";
 
     height: 1px;
+
     background: #eee;
 
     flex: 1;
@@ -200,7 +240,9 @@ form input::placeholder {
 }
 
 
-/* Sign Up */
+/* =========================
+   Sign Up
+========================= */
 
 .sign-up {
     width: 100%;
@@ -224,20 +266,61 @@ form input::placeholder {
 }
 
 
-/* Footer */
+/* =========================
+   Footer
+========================= */
 
 footer {
-    height: 100px;
+    min-height: 100px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     gap: 35px;
+
+    padding: 20px;
 }
 
 footer a {
     text-decoration: none;
+
     color: #9da5b0;
+
     font-size: 14px;
+}
+
+footer a:hover {
+    color: #536174;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        height: 400px;
+        margin-bottom: 230px;
+    }
+    .login-card {
+        width: 90%;
+        max-width: 375px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+        padding: 0 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
