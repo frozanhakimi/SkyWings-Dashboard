@@ -2,18 +2,20 @@ const hamburgerBtn = document.getElementById('hamburgerBtn');
 const hamburgerDropdown = document.getElementById('hamburgerDropdown');
 const supportCard = document.querySelector('.support-card');
 
+const sidebar = document.querySelector('.sidebar');
+const sidebarToggle = document.getElementById('sidebarToggle');
+const sidebarOverlay = document.getElementById('sidebarOverlay');
+// Hamburger Menu  
+hamburgerBtn.addEventListener('click', function (e) {  
+    e.stopPropagation();  
+    hamburgerDropdown.classList.toggle('show');
 
-// Hamburger Menu 
-hamburgerBtn.addEventListener('click', function (e) { 
-    e.stopPropagation(); 
-    hamburgerDropdown.classList.toggle('show'); 
-}); 
-
-function selectOption(event) { 
-    event.preventDefault(); 
-    hamburgerDropdown.classList.remove('show'); 
-} 
-
+    // Open Sidebar on mobile
+    if (window.innerWidth <= 768) {
+        sidebar.classList.toggle('mobile-open');
+        sidebarOverlay.classList.toggle('show');
+    }
+});
 
 // Search Dropdown 
 const searchInput = document.getElementById('searchInput'); 
@@ -43,18 +45,23 @@ document.addEventListener('click', function (e) {
 
 }); 
 
-// Sidebar Active State
-const menuLinks = document.querySelectorAll('.menu a');
-
-menuLinks.forEach(function (link) {
-    link.addEventListener('click', function () {
-
-        menuLinks.forEach(function (item) {
-            item.classList.remove('active');
-        });
+// Sidebar Active State 
+const menuLinks = document.querySelectorAll('.menu a'); 
+ 
+menuLinks.forEach(function (link) { 
+    link.addEventListener('click', function () { 
+        menuLinks.forEach(function (item) { 
+            item.classList.remove('active'); 
+        }); 
 
         link.classList.add('active');
-    });
+
+        // Close hamburger window on mobile
+        if (window.innerWidth <= 768) {
+            sidebar.classList.remove('mobile-open');
+            sidebarOverlay.classList.remove('show');
+        }
+    }); 
 });
 
 
@@ -62,3 +69,16 @@ menuLinks.forEach(function (link) {
 supportCard.addEventListener('click', function () { 
     window.open('mailto:hakimifrozan0@gmail.com.com', '_self'); 
 });
+   
+   /* Desktop: Collapse / Expand Sidebar */
+   
+   sidebarToggle.addEventListener("click", function () {
+       sidebar.classList.toggle("collapsed");
+   });
+   
+   /* Mobile: Close when clicking outside */
+   
+   sidebarOverlay.addEventListener("click", function () {
+       sidebar.classList.remove("mobile-open");
+       sidebarOverlay.classList.remove("show");
+   });
