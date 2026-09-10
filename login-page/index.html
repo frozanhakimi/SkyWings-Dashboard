@@ -1,97 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Sky Wings</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>MyPatientHUB</title>
 
     <link rel="stylesheet" href="style.css">
+
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
->
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 </head>
 
 <body>
 
-    <!-- Header / Background -->
+    <!-- Hero -->
     <section class="hero">
 
         <div class="hero-content">
+
             <h1>Welcome to Sky Wings!</h1>
 
             <p>
-                  
-              We provide safe, comfortable, and memorable journeys with Sky Wings.
+                We provide safe, comfortable, and memorable journeys with Sky Wings.
             </p>
+
         </div>
+
 
         <!-- Login Card -->
         <div class="login-card">
 
             <h2>Sign in to Sky Wings</h2>
 
+
             <!-- Social Login -->
             <div class="social-buttons">
-                <button class="social-btn facebook">
-               <i class="fa-brands fa-facebook-f"></i>
+
+                <button
+                    type="button"
+                    class="social-btn facebook"
+                    id="facebookBtn"
+                >
+                    <i class="fa-brands fa-facebook-f"></i>
                 </button>
 
-                <button class="social-btn google">
 
+                <button
+                    type="button"
+                    class="social-btn google"
+                    id="googleBtn"
+                >
                     <i class="fa-brands fa-google"></i>
                 </button>
 
             </div>
 
+
             <!-- Login Form -->
-            <form>
+            <form id="loginForm">
 
                 <input
                     type="text"
+                    id="email"
                     placeholder="Email or Phone number"
                 >
 
+
                 <input
                     type="password"
+                    id="password"
                     placeholder="Please enter your password"
                 >
 
-                <button class="sign-in">
+
+                <button
+                    type="submit"
+                    class="sign-in"
+                    id="signInBtn"
+                >
                     SIGN IN
                 </button>
 
             </form>
 
-            <!-- Remember -->
+
+            <!-- Options -->
             <div class="options">
 
-                <a href="#">Forgot password?</a>
+                <a href="#" id="forgotPassword">
+                    Forgot password?
+                </a>
+
 
                 <label>
-                    <input type="checkbox">
+                    <input
+                        type="checkbox"
+                        id="rememberMe"
+                    >
                     Remember me
                 </label>
 
             </div>
 
+
+            <!-- OR -->
             <div class="or">
                 <span>or</span>
             </div>
 
-            <!-- Sign Up -->
-            <button class="sign-up">
-                SIGN UP
+
+            <!-- Log In -->
+            <button
+                type="button"
+                class="sign-up"
+                id="logInBtn"
+            >
+                LOG IN
             </button>
 
         </div>
@@ -103,16 +131,21 @@
     <footer>
 
         <a href="#">Google Play Store APP</a>
+
         <a href="#">App Store APP</a>
-        <a href="#">About MyPatientHUB</a>
+
+        <a href="#">About Sky Wings</a>
+
         <a href="#">About Us</a>
+
         <a href="#">Our Blog</a>
 
     </footer>
 
-</body>
-</html>
 
-     
+    <!-- JavaScript -->
+    <script src="script-login.js"></script>
+
 </body>
+
 </html>
