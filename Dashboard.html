@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyWings Airlines Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo-area">
+            <img src="images/logo.png" alt="SkyWings Logo">
+            <h1>SKYWINGS</h1>
+            <span>Airlines</span>
+        </div>
+        <nav class="menu"> 
+            <a href="#" class="active"> 
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg> 
+                Dashboard 
+            </a> 
+        
+            <a href="#"> 
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path></svg> 
+                Flights 
+            </a> 
+        
+            <a href="#"> 
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg> 
+                Bookings 
+            </a> 
+        
+            <a href="#"> 
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> 
+                Find Flights 
+            </a> 
+        
+            <a href="#"> 
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> 
+                Destinations 
+            </a> 
+        
+            <a href="#"> 
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg> 
+                Messages 
+            </a> 
+        
+            <a href="#"> 
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg> 
+                Payments 
+            </a> 
+        
+            <a href="#"> 
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> 
+                My Account 
+            </a> 
+        
+            <a href="#"> 
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg> 
+                Settings 
+            </a> 
+        </nav>
+        <a href="mailto:hakimifrozan0@gmail.com" class="support-card">
+            <div class="help-icon">?</div>
+            <h3>Need Help?</h3>
+            <p>Our support is available 24/7.</p>
+        </a>
+    </aside>
+
+<!-- Desktop Sidebar Collapse Button --> 
+<button class="sidebar-toggle" id="sidebarToggle" aria-label="Collapse sidebar"> 
+    ‹ 
+</button>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- Topbar -->
+        <header class="topbar">
+            <div class="topbar-left">
+                <button class="hamburger" id="hamburgerBtn">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </button>
+                
+                <div class="page-title">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+                    <span>Dashboard</span>
+                </div>
+
+                <!-- humburger-->
+                <div class="hamburger-dropdown" id="hamburgerDropdown">
+                    <a href="#" onclick="selectOption(event)">Profile</a>
+                    <a href="#" onclick="selectOption(event)">Settings</a>
+                    <a href="#" onclick="selectOption(event)">Help</a>
+                    <a href="#" onclick="selectOption(event)">Log out</a>
+                </div>
+            </div>
+
+            <div class="topbar-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Type here..." id="searchInput">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <div class="search-dropdown" id="searchDropdown">
+                        <a href="#">Flights</a>
+                        <a href="#">Find Flights</a>
+                        <a href="#">Dashboard</a>
+                    </div>
+                </div>
+                
+                <button class="login-btn">Login</button>
+                <div class="user-actions">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                </div>
+            </div>
+        </header>
+
+        <h1 class="welcome-title">Welcome to SkyWings Airlines!</h1>
+
+        <div class="dashboard-grid">
+            
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Flight Promotions</span>
+                    <span class="info-icon">i</span>
+                </div>
+                <div class="card-content chart-layout">
+                    <div class="graph-placeholder">
+                        <img src="images/flight_promotions_donut.png" alt="Promotion Graph" id="promoGraph">
+                    </div>
+                    
+                    <div class="chart-legend">
+                        <div class="legend-item"><span class="dot" style="background:#e11d48;"></span> Qatar Airways <span class="pct">24%</span></div>
+                        <div class="legend-item"><span class="dot" style="background:#3b82f6;"></span> Emirates <span class="pct">18%</span></div>
+                        <div class="legend-item"><span class="dot" style="background:#10b981;"></span> Turkish Airlines <span class="pct">15%</span></div>
+                        <div class="legend-item"><span class="dot" style="background:#eab308;"></span> Lufthansa <span class="pct">12%</span></div>
+                        <div class="legend-item"><span class="dot" style="background:#d946ef;"></span> Singapore Airlines <span class="pct">9%</span></div>
+                    </div>
+                </div>
+                <button class="btn-blue">More Details</button>
+            </div>
+
+            <!-- Card 2-->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Booking Overview</span>
+                    <span class="info-icon">i</span>
+                </div>
+                <div class="card-content chart-layout">
+                    <div class="graph-placeholder">
+                        <img src="images/booking_overview_donut.png" alt="Booking Graph" id="bookingGraph">
+                    </div>
+                    
+                    <div class="chart-legend">
+                        <div class="legend-item"><span class="dot" style="background:#1e3a8a;"></span> Business Class <span class="pct">35%</span></div>
+                        <div class="legend-item"><span class="dot" style="background:#3b82f6;"></span> Economy Class <span class="pct">40%</span></div>
+                        <div class="legend-item"><span class="dot" style="background:#10b981;"></span> First Class <span class="pct">15%</span></div>
+                        <div class="legend-item"><span class="dot" style="background:#e11d48;"></span> Premium Economy <span class="pct">10%</span></div>
+                    </div>
+                </div>
+                <button class="btn-blue">More Details</button>
+            </div>
+
+            <!-- Card 3-->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Smart Market Usage</span>
+                    <span class="info-icon">i</span>
+                </div>
+                <div class="card-content chart-layout">
+                    <div class="graph-placeholder">
+                        <img src="images/smart_market_usage_donut.png" alt="Market Graph" id="marketGraph">
+                    </div>
+                    
+                    <div class="chart-legend">
+                        <div class="legend-item"><span class="dot" style="background:#1e3a8a;"></span> Seat Occupancy Rate <span class="pct">87%</span></div>
+                        <div class="legend-item"><span class="dot" style="background:#3b82f6;"></span> Customer Satisfaction <span class="pct">94%</span></div>
+                        <div class="legend-item"><span class="dot" style="background:#10b981;"></span> Online Check-in Rate <span class="pct">76%</span></div>
+                        <div class="legend-item"><span class="dot" style="background:#eab308;"></span> In-flight Wifi Usage <span class="pct">68%</span></div>
+                        <div class="legend-item"><span class="dot" style="background:#e11d48;"></span> Extra Baggage Sales <span class="pct">42%</span></div>
+                    </div>
+                </div>
+            </div>
+
+           
+            <!-- Card 4-->
+<div class="card">
+    <div class="card-header">
+        <span class="card-title">Flight Performance</span>
+        <span class="info-icon">i</span>
+    </div>
+
+    <div class="card-content">
+        <div class="stat-row">
+            <span class="stat-name">On Time:</span>
+            <span class="percentage">72%</span>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 72%;"></div>
+        </div>
+
+        <div class="stat-row">
+            <span class="stat-name">Delayed:</span>
+            <span class="percentage">18%</span>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 18%;"></div>
+        </div>
+
+        <div class="stat-row">
+            <span class="stat-name">Cancelled:</span>
+            <span class="percentage">10%</span>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 10%;"></div>
+        </div>
+
+        <button class="btn-blue" style="margin-top: 20px;">More Details</button>
+    </div>
+</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            © 2024 SkyWings Airlines . Privacy Policy | Terms | Contact
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
