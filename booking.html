@@ -241,3 +241,67 @@
             © 2024 SkyWings Airlines . Privacy Policy | Terms | Contact
         </div>
     </main>
+      <!-- TICKET PANEL -->
+      <div class="ticket-overlay" id="ticketOverlay"></div>
+
+      <div class="ticket-panel" id="ticketPanel">
+          <div class="ticket-header">
+              <h3>✈ E-TICKET</h3>
+              <button class="close-ticket" id="closeTicket">✕</button>
+          </div>
+  
+          <div class="ticket-route">
+              <div class="city">
+                  <div class="code" id="ticketFrom">KBL</div>
+                  <div class="name" id="ticketFromCity">Kabul</div>
+              </div>
+              <div class="plane-icon">✈</div>
+              <div class="city">
+                  <div class="code" id="ticketTo">DXB</div>
+                  <div class="name" id="ticketToCity">Dubai</div>
+              </div>
+          </div>
+  
+          <div class="ticket-info">
+              <div class="ticket-row">
+                  <span class="label">Booking ID:</span>
+                  <span class="value" id="ticketId">#SKW-12345</span>
+              </div>
+              <div class="ticket-row">
+                  <span class="label">Passenger:</span>
+                  <span class="value" id="ticketPassenger">Frozan Hakimi</span>
+              </div>
+              <div class="ticket-row">
+                  <span class="label">Date:</span>
+                  <span class="value" id="ticketDate">15 Oct 2024</span>
+              </div>
+              <div class="ticket-row">
+                  <span class="label">Time:</span>
+                  <span class="value" id="ticketTime">08:00 AM</span>
+              </div>
+          </div>
+  
+          <div class="ticket-footer">
+              <span class="status-badge">Confirmed</span>
+              <div class="barcode">
+                  <span style="height:20px"></span>
+                  <span style="height:14px"></span>
+                  <span style="height:22px"></span>
+                  <span style="height:10px"></span>
+                  <span style="height:18px"></span>
+                  <span style="height:22px"></span>
+                  <span style="height:12px"></span>
+                  <span style="height:20px"></span>
+                  <span style="height:16px"></span>
+                  <span style="height:22px"></span>
+                  <span style="height:14px"></span>
+                  <span style="height:18px"></span>
+              </div>
+          </div>
+      </div>
+  
+      <script src="script.js"></script>
+      <script src="dashboard.js"></script>
+      <script src="pages.js"></script>
+  </body>
+  </html>
