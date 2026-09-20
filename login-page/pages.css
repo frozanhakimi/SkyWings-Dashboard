@@ -149,3 +149,180 @@
         transform: translateY(0);
     }
 }
+
+/* =========================================
+   FLIGHT CARD - List View
+   ========================================= */
+.flight-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.flight-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(30, 58, 138, 0.15);
+}
+
+.flight-airline {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 160px;
+}
+
+.airline-logo {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: #f3f4f6;
+    padding: 5px;
+}
+
+.flight-airline span {
+    font-weight: bold;
+    color: #1e3a8a;
+    font-size: 14px;
+}
+
+.flight-route {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+    justify-content: center;
+}
+
+.flight-route .time {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1e3a8a;
+    text-align: center;
+}
+
+.flight-route .time span {
+    display: block;
+    font-size: 11px;
+    color: #6b7280;
+    font-weight: normal;
+    margin-top: 3px;
+}
+
+.flight-route .duration {
+    text-align: center;
+    font-size: 12px;
+    color: #6b7280;
+    min-width: 80px;
+}
+
+.flight-route .duration .line {
+    width: 60px;
+    height: 2px;
+    background: #d1d5db;
+    margin: 5px auto;
+    position: relative;
+    border-radius: 2px;
+}
+
+.flight-route .duration .line::before,
+.flight-route .duration .line::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #1e3a8a;
+    top: -2px;
+}
+
+.flight-route .duration .line::before { left: -3px; }
+.flight-route .duration .line::after { right: -3px; }
+
+.flight-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    min-width: 110px;
+}
+
+.flight-price span {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+/* =========================================
+   GRID VIEW
+   ========================================= */
+.flight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.flight-card-grid {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 25px 20px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.flight-card-grid:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(30, 58, 138, 0.15);
+}
+
+.flight-card-grid .grid-logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin: 0 auto 15px;
+    display: block;
+    border-radius: 50%;
+    background: #f3f4f6;
+    padding: 8px;
+}
+
+.flight-card-grid h4 {
+    color: #1e3a8a;
+    margin-bottom: 6px;
+    font-size: 17px;
+}
+
+.flight-card-grid .route-text {
+    color: #6b7280;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.flight-card-grid .grid-meta {
+    color: #9ca3af;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.flight-card-grid .grid-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1e3a8a;
+    margin: 15px 0;
+}
+
+.flight-card-grid .btn-blue {
+    width: 100%;
+}
