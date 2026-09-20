@@ -1,0 +1,88 @@
+/* =========================================
+   HERO BANNER
+   ========================================= */
+   .page-hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #3b82f6 100%);
+    border-radius: 16px;
+    padding: 40px 30px;
+    color: white;
+    text-align: center;
+    margin-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(30, 58, 138, 0.2);
+}
+
+.page-hero::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.4) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.page-hero h2 {
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.page-hero p {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 25px;
+}
+
+.hero-search-form {
+    display: flex;
+    gap: 10px;
+    max-width: 780px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hero-search-form input,
+.hero-search-form select {
+    flex: 1;
+    min-width: 150px;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.95);
+    color: #1f2937;
+    font-family: inherit;
+}
+
+.hero-search-form input::placeholder {
+    color: #9ca3af;
+}
+
+.hero-search-form .btn-search {
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    font-family: inherit;
+}
+
+.hero-search-form .btn-search:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+}
