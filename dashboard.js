@@ -1,6 +1,6 @@
+
 /* =========================================
-   LOGIN BUTTON - در همه صفحات کار می‌کند
-   ========================================= */
+   LOGIN BUTTON -========================== */
    document.addEventListener('DOMContentLoaded', function () {
     const loginBtns = document.querySelectorAll('.login-btn');
     
@@ -9,4 +9,9 @@
             window.location.href = "login-page/index.html";
         });
     });
+
+const loginBtn = document.querySelector(".login-btn");
+
+loginBtn.addEventListener("click", function () {
+    window.location.href = "login-page/index.html";
 });
